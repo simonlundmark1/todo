@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="/img/TODO-LIST-2024-02-21.png" alt="">
+    </div>
+    <div id="app">
+    <input id="todo-input" type="text" placeholder="Add a new todo">
+    <button id="add-todo-btn">Add Todo</button>
+    <button id="clear-todo-btn">Clear All</button>
+
+    <ul id="todo-list"></ul>
+  </div>
+
+    </div>
+    <script type="module" src="/dist/main.js"></script>
+    <script type="module" src="/dist/TodoItem.js"></script>
+    <script type="module" src="/dist/TodoList.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,207 @@
+:root {
+  background-color: #242424;
+  }
+
+  
+  body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  }
+  
+  h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  }
+  
+  #app {
+    min-width: auto;
+    max-width: 1280px;
+    text-align: center;
+    min-height: 100vh; 
+    margin-top: 20rem; 
+    margin-bottom: 2rem; 
+  }
+  
+.logo {
+position: absolute;
+transform: scale(0.2); /* Adjust the scale value as needed */
+margin-top: -320px;
+transition: transform 0.2s;
+
+  }
+  
+  .logo:hover {
+    transform: perspective(200px) rotateX(5deg) rotateY(-0deg) rotateZ(-1deg) scale(0.22);
+  }
+  
+  .logo.vanilla:hover {
+    transform: perspective(200px) rotateX(5deg) rotateY(-0deg) rotateZ(-1deg) scale(0.22);
+
+  }
+  
+
+  button {
+    gap: 5px;
+    margin-top: 10px;
+  border: 1px solid transparent;
+  padding: 0.1em 0.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #E9E9E9;
+  background-color: #474747;
+  cursor: pointer;
+  transition: border-color, transform 0.25s;  
+  transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+  }
+  
+  button:hover {
+  border-color: #ffffff;
+  transform: perspective(50px) rotateX(0deg) rotateY(0deg) rotateZ(2deg) scale(1.05) ;
+
+
+  }
+
+  
+  body, html {
+    line-height: 1.5;
+    zoom: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+
+  }
+
+  
+  #todo-list {
+    
+  list-style-type: none;
+  padding: 0;
+  min-width: 300px;
+  width: 100%; /* List takes full width of the container */; /* Allows the list to expand */
+  max-height: 70vh; /* Adjust based on your needs, ensuring there's room for expansion below the 20rem top margin */
+
+  }
+  
+  #todo-list li {
+  display: flex;display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Spread items horizontally */
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #575757;
+  color: rgba(255, 255, 255, 0.87);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transform: perspective(100px) rotateX(3deg) rotateY(3deg);
+  position: relative;
+  transition: transform 0.1s;
+
+  }
+  
+  #todo-list li::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  border-right: 10px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  z-index: -1;
+  transform: perspective(100px) rotateX(-3deg) rotateY(-3deg);
+  }
+
+  #todo-list li:hover{
+    transform: perspective(40px) rotateX(1deg) rotateY(1deg) scale(1.05);
+  }
+
+  #todo-input {
+    padding-left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    transform: perspective(100px) rotateX(-3deg) rotateY(-3deg);
+    color: #242424;
+  }
+  
+  #todo-input, #add-todo-btn, #clear-todo-btn {
+    margin-bottom: 2px; /* Adds 20px space below each element */
+  }
+   
+
+  #todo-list .remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  margin-left: auto;
+  padding: 0.1em 0.2em;
+  }
+  
+  #todo-list li.completed {
+  background-color: rgb(48, 70, 48);
+  }
+  
+  #todo-list li:nth-child(odd) {
+    margin-left: 20px;
+    margin-right: 10px;
+    transform: perspective(100px) rotateX(3deg) rotateY(3deg);
+  }
+  
+  #todo-list li:nth-child(even) {
+    margin-right: 30px;
+    margin-left: -5px;
+    transform: perspective(100px) rotateX(-3deg) rotateY(-3deg);
+  }
+
+  #todo-list li:nth-child(even) .due-date-btn {
+  margin-left: 257px;
+
+  }
+  #todo-list li:nth-child(even) .due-date-btn.date-selected {
+    margin-left: 190px;
+    }
+
+  
+  #todo-list li:nth-child(even)  .datetime-picker {
+    position: absolute;
+    margin-left: 75px;
+    }
+
+
+  #todo-list li:nth-child(odd):hover {
+    transform: perspective(200px) rotateX(3deg) rotateY(3deg) scale(1.05); 
+  }
+  
+  #todo-list li:nth-child(even):hover {
+    transform: perspective(200px) rotateX(-3deg) rotateY(-3deg) scale(1.05); 
+  }
+
+  .completed span{
+    text-decoration: line-through;
+  }
+  
+  .datetime-picker {
+    color: #242424;
+    background-color: #d6d6d6;
+    z-index: 100;
+
+  max-width: 180px;
+  }
+
+  .due-date-btn {
+    justify-content: flex-end;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 250px;
+    background: none;
+  }
+
+  .due-date-btn.date-selected {
+  margin-left: 180px;
+  }
